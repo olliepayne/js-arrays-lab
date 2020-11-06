@@ -38,7 +38,7 @@ Exercise 4:
 */
 
 // Complete Exercise 4 below...
-
+let favFood = foods[1];
 
 
 console.log('Exercise 4 Result:\n', favFood);
@@ -49,7 +49,7 @@ Exercise 5:
 */
 
 // Complete Exercise 5 below...
-
+foods.splice(2, 0, 'tofu');
 
 
 console.log('Exercise 5 Result:\n', foods);
@@ -60,7 +60,8 @@ Exercise 6:
 */
 
 // Complete Exercise 6 below...
-
+foods[1] = 'sushi';
+foods.splice(2, 0, 'cupcake');
 
 
 console.log('Exercise 6 Result:\n', foods);
@@ -72,7 +73,7 @@ Exercise 7:
 */
 
 // Complete Exercise 7 below...
-
+let yummy = foods.slice(1, 3);
 
 
 console.log('Exercise 7 Result:\n', yummy);
@@ -83,7 +84,7 @@ Exercise 8:
 */
 
 // Complete Exercise 8 below...
-
+let soyIdx = foods.indexOf('tofu');
 
 
 console.log('Exercise 8 Result:\n', soyIdx);
@@ -95,7 +96,10 @@ Exercise 9:
 */
 
 // Complete Exercise 9 below...
-
+let allFoods = String;
+for(let i = 0; i < foods.length; i++) {
+  allFoods = allFoods + foods[i] + ' -> ';
+}
 
 
 console.log('Exercise 9 Result:\n', allFoods);
@@ -106,7 +110,14 @@ Exercise 10:
 */
 
 // Complete Exercise 10 below...
-
+let hasSoup = false;
+for(let i = 0; i < foods.length; i++) {
+  const currentElement = foods[i];
+  if(currentElement === 'soup') {
+    hasSoup = true;
+    break;
+  }
+}
 
 
 console.log('Exercise 10 Result:\n', hasSoup);
@@ -120,7 +131,12 @@ Exercise 11:
 const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90];
 
 // Complete Exercise 11 below...
-
+let odds = [];
+nums.forEach(function(num) {
+  if(num % 2 === 1) {
+    odds.push(num);
+  }
+});
 
 
 console.log('Exercise 11 Result:\n', odds);
@@ -134,7 +150,18 @@ Exercise 12:
 */
 
 // Complete Exercise 12 below...
-
+let fizz = [];
+let buzz = [];
+let fizzbuzz = [];
+nums.forEach(function(num) {
+  if(num % 3 === 0 && num % 5 === 0) {
+    fizzbuzz.push(num);
+  } else if(num % 3 === 0) {
+    fizz.push(num);
+  } else if(num % 5 === 0) {
+    buzz.push(num);
+  }
+});
 
 
 console.log('Exercise 12 Results:');
