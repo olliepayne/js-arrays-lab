@@ -183,7 +183,12 @@ const numArrays = [
 ];
 
 // Complete Exercise 13 below...
-
+let numList = [];
+for(let i = 0; i < numArrays.length; i++) {
+  if(i === numArrays.length - 1) {
+    numList = numArrays[i];
+  }
+}
 
 
 console.log('Exercise 13 Result:\n', numList);
@@ -194,7 +199,14 @@ Exercise 14:
 */
 
 // Complete Exercise 14 below...
-
+let num = 0;
+numArrays.forEach(function(arr) {
+  arr.forEach(function(val) {
+    if(val === 66) {
+      num = val;
+    }
+  });
+});
 
 
 console.log('Exercise 14 Result:\n', num);
