@@ -218,7 +218,12 @@ Exercise 15:
 */
 
 // Complete Exercise 15 below...
-
+let total = 0;
+numArrays.forEach(function(arr) {
+  arr.forEach(function(val) {
+    total += val;
+  });
+});
 
 
 console.log('Exercise 15 Result:\n', total);
